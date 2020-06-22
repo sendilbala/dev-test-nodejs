@@ -7,7 +7,7 @@ list of countries and their population. This task should take 2-3 hours but don'
 complete all items, just make sure to show your understanding of the core technologies we use.
 
 1. Fork this repo
-2. Create an endpoint that allows the listing of the countries in `src/api/country.ts`
+2. Create an endpoint that allows the listing of the countries using the method from `src/api/country.ts`
 3. Create an endpoint to fetch all of the countries sorted by their population
 4. Allow the populations to be updated
 5. Allow countries to be updated
