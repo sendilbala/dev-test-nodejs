@@ -29,3 +29,26 @@ Feel free to use the internet including Google and Stackoverflow to help with th
 Please just ask.
 
 Good luck and thanks for taking the time to complete this task!
+
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries"
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" http://localhost:3000/countries?sort=asc
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" http://localhost:3000/countries?sort=desc
+
+
+curl --request POST 'localhost:3000/countries' \
+--header 'Content-Type: application/json' \
+-H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" \
+--data-raw '{
+    "name": "India",
+    "code": "IND",
+    "population":1400
+}'
+
+curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries/hD2DMRo1tRT"
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries/IK65_n4OQww"
+
+
