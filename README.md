@@ -30,13 +30,27 @@ Please just ask.
 
 Good luck and thanks for taking the time to complete this task!
 
++++++++++++++++++++++++++++++++++++++++++++++++++++
+To test the app:
+
+npm start
+
+In another terminal run the following commands
+
+To list all the countries:
 
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries"
 
+To fetch all the countries with sort pn population in asc
+
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" http://localhost:3000/countries?sort=asc
+
+To fetch all the countries with sort pn population in desc
+
 
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" http://localhost:3000/countries?sort=desc
 
+To insert new country data
 
 curl --request POST 'localhost:3000/countries' \
 --header 'Content-Type: application/json' \
@@ -47,8 +61,20 @@ curl --request POST 'localhost:3000/countries' \
     "population":1400
 }'
 
+To delete the a country
+
 curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries/hD2DMRo1tRT"
+
+To fetch a country
 
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" "localhost:3000/countries/IK65_n4OQww"
 
+To update the population of a country
 
+curl --request PATCH "localhost:3000/users/IK65_n4OQww" \
+--header 'Content-Type: application/json' \
+-H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=" \
+
+--data-raw '{
+    "population": 2323000
+}'
